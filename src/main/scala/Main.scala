@@ -18,8 +18,10 @@ object Main {
     import spark.implicits._
 
     // Apply the schema to the RDD
-    val df = spark.sparkContext.textFile("my_sample_train.csv").map(_.split(","))
+    val df = spark.sparkContext.textFile("trainClass1/trainClass1.csv").map(_.split(","))
       .toDF()
+
+    df.sele
 
     df.show()
   }
